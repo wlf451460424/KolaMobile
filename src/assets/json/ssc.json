@@ -1,0 +1,714 @@
+{
+    "ssc":[
+        {
+            "lotteryId": "1",
+            "lotteryName": "重庆时时彩",
+            "explain": "lottery_cqssc_help",
+            "tip": "白天7:30-23:50，50期；夜间0:30-3:10, 9期；20分钟一期，全天共59期。",
+            "isShowType": "1"
+        },
+        {
+            "lotteryId": "2",
+            "lotteryName": "新疆时时彩",
+            "explain": "lottery_xjssc_help",
+            "tip": "10:20-2:00，20分钟一期，全天48期。",
+            "isShowType": "0"
+        },
+        {
+            "lotteryId": "3",
+            "lotteryName": "天津时时彩",
+            "explain": "lottery_tjssc_help",
+            "tip": "9:20-23:00，20分钟一期，全天42期。",
+            "isShowType": "0"
+        },
+        {
+            "lotteryId": "4",
+            "lotteryName": "黑龙江时时彩",
+            "explain": "lottery_hljssc_help",
+            "tip": "9:00—22:40 ，20分钟一期，全天42期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "5",
+            "lotteryName": "台湾宾果",
+            "explain": "lottery_twbg_help",
+            "tip": "9:30-23:10，20分钟一期，全天42期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "6",
+            "lotteryName": "河内1分彩",
+            "explain": "lottery_hnffc_help",
+            "tip": "1分钟一期，共1440期，每天 00:00 至 23:59开奖",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "7",
+            "lotteryName": "河内5分彩",
+            "explain": "lottery_hnwfc_help",
+            "tip": "00:00-23:55，5分钟一期，全天288期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "8",
+            "lotteryName": "腾讯分分彩（奇趣）",
+            "explain": "lottery_qqtxffc_help",
+            "tip": "24小时售卖，1分钟一期，全天共1440期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "9",
+            "lotteryName": "腾讯分分彩（凤凰）",
+            "explain": "lottery_fhtxffc_help",
+            "tip": "24小时售卖，1分钟一期，全天共1440期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "10",
+            "lotteryName": "腾讯2分彩-单",
+            "explain": "lottery_txefcd_help",
+            "tip": "全天售卖，2分钟一期，共720期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "11",
+            "lotteryName": "腾讯2分彩-双",
+            "explain": "lottery_txefcs_help",
+            "tip": "全天售卖，2分钟一期，共720期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "12",
+            "lotteryName": "腾讯3分彩",
+            "explain": "lottery_txsfc_help",
+            "tip": "全天售卖，3分钟一期，共480期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "13",
+            "lotteryName": "腾讯5分彩",
+            "explain": "lottery_txwfc_help",
+            "tip": "全天售卖，5分钟一期，共288期。",
+            "isShowType": "2"
+        },
+        {
+            "lotteryId": "14",
+            "lotteryName": "币安分分彩",
+            "explain": "lottery_baffc_help",
+            "tip": "1分钟一期，共1440期，每天 00:00 至 23:59开奖",
+            "isShowType": "2"
+        }
+    ],
+    "play" : [
+        {
+            "kind": "五星",
+            "data": [
+                {
+                    "playId": "1",
+                    "playName": "通选复式"
+                },
+                {
+                    "playId": "2",
+                    "playName": "通选单式"
+                },
+                {
+                    "playId": "3",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "4",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "5",
+                    "playName": "组选120"
+                },
+                {
+                    "playId": "6",
+                    "playName": "组选60"
+                },
+                {
+                    "playId": "7",
+                    "playName": "组选30"
+                },
+                {
+                    "playId": "8",
+                    "playName": "组选20"
+                },
+                {
+                    "playId": "9",
+                    "playName": "组选10"
+                },
+                {
+                    "playId": "10",
+                    "playName": "组选5"
+                },
+                {
+                    "playId": "11",
+                    "playName": "总和大小单双"
+                }
+            ]
+        },
+        {
+            "kind": "后四",
+            "data": [
+                {
+                    "playId": "12",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "13",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "14",
+                    "playName": "组选24"
+                },
+                {
+                    "playId": "15",
+                    "playName": "组选12"
+                },
+                {
+                    "playId": "16",
+                    "playName": "组选6"
+                },
+                {
+                    "playId": "17",
+                    "playName": "组选4"
+                }
+            ]
+        },
+        {
+            "kind": "前四",
+            "data": [
+                {
+                    "playId": "18",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "19",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "20",
+                    "playName": "组选24"
+                },
+                {
+                    "playId": "21",
+                    "playName": "组选12"
+                },
+                {
+                    "playId": "22",
+                    "playName": "组选6"
+                },
+                {
+                    "playId": "23",
+                    "playName": "组选4"
+                }
+            ]
+        },
+        {
+            "kind": "后三",
+            "data": [
+                {
+                    "playId": "24",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "25",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "26",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "27",
+                    "playName": "直选跨度"
+                },
+                {
+                    "playId": "28",
+                    "playName": "组三复式"
+                },
+                {
+                    "playId": "29",
+                    "playName": "组六复式"
+                },
+                {
+                    "playId": "30",
+                    "playName": "混合组选"
+                },
+                {
+                    "playId": "31",
+                    "playName": "组选和值"
+                },
+                {
+                    "playId": "32",
+                    "playName": "组选包胆"
+                },
+                {
+                    "playId": "33",
+                    "playName": "和值尾数"
+                },
+                {
+                    "playId": "34",
+                    "playName": "特殊号"
+                }
+            ]
+        },
+        {
+            "kind": "中三",
+            "data": [
+                {
+                    "playId": "35",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "36",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "37",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "38",
+                    "playName": "直选跨度"
+                },
+                {
+                    "playId": "39",
+                    "playName": "组三复式"
+                },
+                {
+                    "playId": "40",
+                    "playName": "组六复式"
+                },
+                {
+                    "playId": "41",
+                    "playName": "混合组选"
+                },
+                {
+                    "playId": "42",
+                    "playName": "组选和值"
+                },
+                {
+                    "playId": "43",
+                    "playName": "组选包胆"
+                },
+                {
+                    "playId": "44",
+                    "playName": "和值尾数"
+                },
+                {
+                    "playId": "45",
+                    "playName": "特殊号"
+                }
+            ]
+        },
+        {
+            "kind": "前三",
+            "data": [
+                {
+                    "playId": "46",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "47",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "48",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "49",
+                    "playName": "直选跨度"
+                },
+                {
+                    "playId": "50",
+                    "playName": "组三复式"
+                },
+                {
+                    "playId": "51",
+                    "playName": "组六复式"
+                },
+                {
+                    "playId": "52",
+                    "playName": "混合组选"
+                },
+                {
+                    "playId": "53",
+                    "playName": "组选和值"
+                },
+                {
+                    "playId": "54",
+                    "playName": "组选包胆"
+                },
+                {
+                    "playId": "55",
+                    "playName": "和值尾数"
+                },
+                {
+                    "playId": "56",
+                    "playName": "特殊号"
+                }
+            ]
+        },
+        {
+            "kind": "后二",
+            "data": [
+                {
+                    "playId": "57",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "58",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "59",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "60",
+                    "playName": "直选跨度"
+                },
+                {
+                    "playId": "61",
+                    "playName": "组选复式"
+                },
+                {
+                    "playId": "62",
+                    "playName": "组选和值"
+                },
+                {
+                    "playId": "63",
+                    "playName": "组选包胆"
+                }
+            ]
+        },
+        {
+            "kind": "前二",
+            "data": [
+                {
+                    "playId": "64",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "65",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "66",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "67",
+                    "playName": "直选跨度"
+                },
+                {
+                    "playId": "68",
+                    "playName": "组选复式"
+                },
+                {
+                    "playId": "69",
+                    "playName": "组选和值"
+                },
+                {
+                    "playId": "70",
+                    "playName": "组选包胆"
+                }
+            ]
+        },
+        {
+            "kind": "定位胆",
+            "data": [
+                {
+                    "playId": "71",
+                    "playName": "定位胆"
+                }
+            ]
+        },
+        {
+            "kind": "不定位",
+            "data": [
+                {
+                    "playId": "72",
+                    "playName": "后三一码"
+                },
+                {
+                    "playId": "73",
+                    "playName": "后三二码"
+                },
+                {
+                    "playId": "74",
+                    "playName": "前三一码"
+                },
+                {
+                    "playId": "75",
+                    "playName": "前三二码"
+                },
+                {
+                    "playId": "76",
+                    "playName": "后四一码"
+                },
+                {
+                    "playId": "77",
+                    "playName": "后四二码"
+                },
+                {
+                    "playId": "78",
+                    "playName": "前四一码"
+                },
+                {
+                    "playId": "79",
+                    "playName": "前四二码"
+                },
+                {
+                    "playId": "80",
+                    "playName": "五星一码"
+                },
+                {
+                    "playId": "81",
+                    "playName": "五星二码"
+                },
+                {
+                    "playId": "82",
+                    "playName": "五星三码"
+                }
+            ]
+        },
+        {
+            "kind": "大小单双",
+            "data": [
+                {
+                    "playId": "83",
+                    "playName": "后三"
+                },
+                {
+                    "playId": "84",
+                    "playName": "前三"
+                },
+                {
+                    "playId": "85",
+                    "playName": "后二"
+                },
+                {
+                    "playId": "86",
+                    "playName": "前二"
+                }
+            ]
+        },
+        {
+            "kind": "任选二",
+            "data": [
+                {
+                    "playId": "87",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "88",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "89",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "90",
+                    "playName": "组选复式"
+                },
+                {
+                    "playId": "91",
+                    "playName": "组选单式"
+                },
+                {
+                    "playId": "92",
+                    "playName": "组选和值"
+                }
+            ]
+        },
+        {
+            "kind": "任选三",
+            "data": [
+                {
+                    "playId": "93",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "94",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "95",
+                    "playName": "直选和值"
+                },
+                {
+                    "playId": "96",
+                    "playName": "组三复式"
+                },
+                {
+                    "playId": "97",
+                    "playName": "组三单式"
+                },
+                {
+                    "playId": "98",
+                    "playName": "组六复式"
+                },
+                {
+                    "playId": "99",
+                    "playName": "组六单式"
+                },
+                {
+                    "playId": "100",
+                    "playName": "混合组选"
+                },
+                {
+                    "playId": "101",
+                    "playName": "组选和值"
+                }
+            ]
+        },
+        {
+            "kind": "任选四",
+            "data": [
+                {
+                    "playId": "102",
+                    "playName": "直选复式"
+                },
+                {
+                    "playId": "103",
+                    "playName": "直选单式"
+                },
+                {
+                    "playId": "104",
+                    "playName": "组选24"
+                },
+                {
+                    "playId": "105",
+                    "playName": "组选12"
+                },
+                {
+                    "playId": "106",
+                    "playName": "组选6"
+                },
+                {
+                    "playId": "107",
+                    "playName": "组选4"
+                }
+            ]
+        },
+        {
+            "kind": "趣味",
+            "data": [
+                {
+                    "playId": "108",
+                    "playName": "一帆风顺"
+                },
+                {
+                    "playId": "109",
+                    "playName": "好事成双"
+                },
+                {
+                    "playId": "110",
+                    "playName": "三星报喜"
+                },
+                {
+                    "playId": "111",
+                    "playName": "四季发财"
+                }
+            ]
+        },
+        {
+            "kind": "龙虎",
+            "data": [
+                {
+                    "playId": "112",
+                    "playName": "万千"
+                },
+                {
+                    "playId": "113",
+                    "playName": "万百"
+                },
+                {
+                    "playId": "114",
+                    "playName": "万十"
+                },
+                {
+                    "playId": "115",
+                    "playName": "万个"
+                },
+                {
+                    "playId": "116",
+                    "playName": "千百"
+                },
+                {
+                    "playId": "117",
+                    "playName": "千十"
+                },
+                {
+                    "playId": "118",
+                    "playName": "千个"
+                },
+                {
+                    "playId": "119",
+                    "playName": "百十"
+                },
+                {
+                    "playId": "120",
+                    "playName": "百个"
+                },
+                {
+                    "playId": "121",
+                    "playName": "十个"
+                }
+            ]
+        },
+        {
+            "kind": "新龙虎",
+            "data": [
+                {
+                    "playId": "122",
+                    "playName": "万千"
+                },
+                {
+                    "playId": "123",
+                    "playName": "万百"
+                },
+                {
+                    "playId": "124",
+                    "playName": "万十"
+                },
+                {
+                    "playId": "125",
+                    "playName": "万个"
+                },
+                {
+                    "playId": "126",
+                    "playName": "千百"
+                },
+                {
+                    "playId": "127",
+                    "playName": "千十"
+                },
+                {
+                    "playId": "128",
+                    "playName": "千个"
+                },
+                {
+                    "playId": "129",
+                    "playName": "百十"
+                },
+                {
+                    "playId": "130",
+                    "playName": "百个"
+                },
+                {
+                    "playId": "131",
+                    "playName": "十个"
+                }
+            ]
+        }
+
+    ]
+}

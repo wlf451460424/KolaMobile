@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui,viewport-fit=cover" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>koala</title>
+    <script>
+      /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */
+(function( win ){
+	var doc = win.document;
+	
+	// If there's a hash, or addEventListener is undefined, stop here
+	if(!win.navigator.standalone && !location.hash && win.addEventListener ){
+		
+		//scroll to 1
+		win.scrollTo( 0, 1 );
+		var scrollTop = 1,
+			getScrollTop = function(){
+				return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+			},
+		
+			//reset to 0 on bodyready, if needed
+			bodycheck = setInterval(function(){
+				if( doc.body ){
+					clearInterval( bodycheck );
+					scrollTop = getScrollTop();
+					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+				}	
+			}, 15 );
+		
+		win.addEventListener( "load", function(){
+			setTimeout(function(){
+				//at load, if user hasn't scrolled more than 20 or so...
+				if( getScrollTop() < 20 ){
+					//reset to hide addr bar at onload
+					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+				}
+			}, 0);
+		}, false );
+	}
+})( this );
+</script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but koala doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
