@@ -20,6 +20,11 @@ export default {
       default () {
         return this.ballText
       }
+    },
+    ballIndex: {
+      type: Number,
+      required: false,
+      default: 0
     }
   },
   data () {
@@ -30,8 +35,11 @@ export default {
   methods: {
     ballClick () {
       this.isActive = !this.isActive
-      this.$emit('ball-click', { ballText: this.ballText, ballValue: this.ballValue, isActive: this.isActive })
+      this.$emit('ball-click', { ballText: this.ballText, ballValue: this.ballValue, isActive: this.isActive, ballIndex: this.ballIndex })
       this.$bus.$emit('calcNotes')
+    },
+    toggleBall () {
+      this.isActive = !this.isActive
     }
   }
 }

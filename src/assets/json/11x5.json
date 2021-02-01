@@ -1,0 +1,242 @@
+{
+  "11x5": [
+    {
+      "lotteryId": "15",
+      "lotteryName": "江苏11选5"
+    },
+    {
+      "lotteryId": "16",
+      "lotteryName": "江西11选5"
+    },
+    {
+      "lotteryId": "17",
+      "lotteryName": "广东11选5"
+    },
+    {
+      "lotteryId": "18",
+      "lotteryName": "山东11选5"
+    },
+    {
+      "lotteryId": "19",
+      "lotteryName": "上海11选5"
+    },
+    {
+      "lotteryId": "20",
+      "lotteryName": "安徽11选5"
+    },
+    {
+      "lotteryId": "21",
+      "lotteryName": "河北11选5"
+    },
+    {
+      "lotteryId": "22",
+      "lotteryName": "黑龙江11选5"
+    },
+    {
+      "lotteryId": "23",
+      "lotteryName": "辽宁11选5"
+    }
+  ],
+  "play": [
+    {
+      "kind": "前三",
+      "data": [
+        {
+          "playId": "1",
+          "playName": "直选复式"
+        },
+        {
+          "playId": "2",
+          "playName": "直选单式"
+        },
+        {
+          "playId": "3",
+          "playName": "直选组合"
+        },
+        {
+          "playId": "4",
+          "playName": "直选胆拖"
+        },
+        {
+          "playId": "5",
+          "playName": "组选复式"
+        },
+        {
+          "playId": "6",
+          "playName": "组选单式"
+        },
+        {
+          "playId": "7",
+          "playName": "组选胆拖"
+        }
+      ]
+    },
+    {
+      "kind": "前二",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 8
+        },
+        {
+          "playName": "直选单式",
+          "playId": 9
+        },
+        {
+          "playName": "直选组合",
+          "playId": 10
+        },
+        {
+          "playName": "直选胆拖",
+          "playId": 11
+        },
+        {
+          "playName": "组选复式",
+          "playId": 12
+        },
+        {
+          "playName": "组选单式",
+          "playId": 13
+        },
+        {
+          "playName": "组选胆拖",
+          "playId": 14
+        }
+      ]
+    },
+    {
+      "kind": "前一",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 15
+        }
+      ]
+    },
+    {
+      "kind": "定位胆",
+      "data": [
+        {
+          "playName": "前三位",
+          "playId": 16
+        }
+      ]
+    },
+    {
+      "kind": "不定胆",
+      "data": [
+        {
+          "playName": "前三位",
+          "playId": 17
+        }
+      ]
+    },
+    {
+      "kind": "任选复式",
+      "data": [
+        {
+          "playName": "一中一",
+          "playId": 18
+        },
+        {
+          "playName": "二中二",
+          "playId": 19
+        },
+        {
+          "playName": "三中三",
+          "playId": 20
+        },
+        {
+          "playName": "四中四",
+          "playId": 21
+        },
+        {
+          "playName": "五中五",
+          "playId": 22
+        },
+        {
+          "playName": "六中五",
+          "playId": 23
+        },
+        {
+          "playName": "七中五",
+          "playId": 24
+        },
+        {
+          "playName": "八中五",
+          "playId": 25
+        }
+      ]
+    },
+    {
+      "kind": "任选单式",
+      "data": [
+        {
+          "playName": "一中一",
+          "playId": 26
+        },
+        {
+          "playName": "二中二",
+          "playId": 27
+        },
+        {
+          "playName": "三中三",
+          "playId": 28
+        },
+        {
+          "playName": "四中四",
+          "playId": 29
+        },
+        {
+          "playName": "五中五",
+          "playId": 30
+        },
+        {
+          "playName": "六中五",
+          "playId": 31
+        },
+        {
+          "playName": "七中五",
+          "playId": 32
+        },
+        {
+          "playName": "八中五",
+          "playId": 33
+        }
+      ]
+    },
+    {
+      "kind": "任选胆拖",
+      "data": [
+        {
+          "playName": "二中二",
+          "playId": 34
+        },
+        {
+          "playName": "三中三",
+          "playId": 35
+        },
+        {
+          "playName": "四中四",
+          "playId": 36
+        },
+        {
+          "playName": "五中五",
+          "playId": 37
+        },
+        {
+          "playName": "六中五",
+          "playId": 38
+        },
+        {
+          "playName": "七中五",
+          "playId": 39
+        },
+        {
+          "playName": "八中五",
+          "playId": 40
+        }
+      ]
+    }
+  ]
+}

@@ -1,18 +1,24 @@
 <template>
   <div class="issue_list_item">
-    <span class="index_number">1</span>
-    <span class="iusse_number">20140910101</span>
+    <span class="index_number">{{ item.id }}</span>
+    <span class="iusse_number">{{ item.issue }}</span>
     <input
       ref="beishu_input"
-      v-model.number="initMultiple"
+      v-model.number="item.bet_multiple"
       class="beishu_number"
       type="number"
     >
-    <span class="money_number">2</span>
+    <span class="money_number">{{ item.bet_money }}</span>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    item: {
+      type: Object,
+      default: undefined
+    }
+  },
   data () {
     return {
       initMultiple: 1

@@ -20,6 +20,13 @@ export default {
       type: Array,
       required: true
     }
+  },
+  methods: {
+    initBettingLayout () {
+      this.$children.forEach(ballLayout => {
+        ballLayout.clearSelectedClick()
+      })
+    }
   }
 }
 </script>

@@ -1,0 +1,48 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "25",
+      "lotteryName": "北京赛车(PK10)",
+      "explain": "lottery_bjsc_help",
+      "tip": "09:07-23:57，5分钟一期，全天179期。",
+      "isShowType": "1"
+    },
+    {
+      "lotteryId": "26",
+      "lotteryName": "腾讯赛车",
+      "explain": "lottery_txsc_help",
+      "tip": "09:07-23:57，5分钟一期，全天179期。",
+      "isShowType": "0"
+    },
+    {
+      "lotteryId": "28",
+      "lotteryName": "马其他幸运飞艇",
+      "explain": "lottery_mqtxyft_help",
+      "tip": "09:07-23:57，5分钟一期，全天179期。",
+      "isShowType": "0"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "整合",
+          "playId": "1"
+        },
+        {
+          "playName": "第1~10名",
+          "playId": "2"
+        },
+        {
+          "playName": "冠亚和值",
+          "playId": "3"
+        },
+        {
+          "playName": "冠亚组合",
+          "playId": "4"
+        }
+      ]
+    }
+  ]
+}

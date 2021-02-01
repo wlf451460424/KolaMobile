@@ -1,9 +1,10 @@
-import axios from 'axios'
-import router from '@router'
-import store from '@store'
 import Toast from '@common/toast'
+import axios from 'axios'
 import base from '@api/base'
+import { getToken } from '@/utils/auth'
+import router from '@router'
 
+// import store from '@store'
 const errorHandler = (status, other) => {
   if (status >= 400 && status < 500) {
     Toast.showText('请求发生错误')
@@ -18,7 +19,8 @@ let instance = axios.create({
   baseURL: base.address,
   time: 1000 * 12,
   headers: {
-    'Content_Type': 'application/json;charset=UTF-8'
+    // 'Content_Type': 'application/json;charset=UTF-8',
+    'Content-Type': 'application/json;charset=UTF-8'
   }
 })
 
@@ -31,13 +33,12 @@ let sources = {}
 // 请求拦截器
 instance.interceptors.request.use(
   config => {
-    console.log(`请求的数据：${JSON.stringify(config.data)}`)
+    // console.log(`请求的数据：${JSON.stringify(config.data)}`)
 
-    const request = JSON.stringify(config.url) + JSON.stringify(config.data)
+    const request = JSON.stringify(config.url) + (JSON.stringify(config.data) ? JSON.stringify(config.data) : '')
     config.cancelToken = new CancelToken((cancel) => {
       sources[request] = cancel
     })
-
     if (requestList.includes(request)) {
       sources[request]('取消重复请求')
     } else {
@@ -47,8 +48,12 @@ instance.interceptors.request.use(
       }
     }
 
-    const token = store.state.userInfo.token
-    token && (config.headers.Authorization = token)
+    // const token = store.state.userInfo.token
+    // token && (config.headers.Authorization = token)
+    const _token = getToken()
+    if (_token) {
+      config.headers['Authorization'] = 'Bearer ' + _token
+    }
     return config
   },
   error => Promise.reject(error)
@@ -57,18 +62,20 @@ instance.interceptors.request.use(
 // 响应拦截器
 instance.interceptors.response.use(
   res => {
-    const request = JSON.stringify(res.config.url) + JSON.stringify(res.config.data)
+    const request = JSON.stringify(res.config.url) + (JSON.stringify(res.config.data) ? JSON.stringify(res.config.data) : '')
     requestList.splice(requestList.findIndex(item => item === request), 1)
-
     if (requestList.length === 0) {
       res.config.showLoading && Toast.tryHideFullScreenLoading()
     }
-
     if (res.data.code === 401) {
       router.push('/login')
     }
-    console.log(`返回的数据：${JSON.stringify(res.data.data)}`)
-    return res.data.code === 200 ? Promise.resolve(res) : Promise.reject(res)
+    if (res.data.code === 403) {
+      Toast.showText('Token过期请')
+    }
+    // console.log(`返回的数据：${JSON.stringify(res.data.data)}`)
+    // return res.data.code === 200 ? Promise.resolve(res) : Promise.reject(res)
+    return res.status === 200 ? Promise.resolve(res) : Promise.reject(res)
   },
   error => {
     if (!window.navigator.onLine) {

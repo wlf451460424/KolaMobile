@@ -1,0 +1,36 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "30",
+      "lotteryName": "江苏快三",
+      "explain": "lottery_jsks_help",
+      "tip": "08:50-22:10，20分钟一期，全天41期。",
+      "isShowType": "0"
+    },
+    {
+      "lotteryId": "31",
+      "lotteryName": "安徽快三",
+      "explain": "lottery_ahks_help",
+      "tip": "09:00-22:00，20分钟/期，全天40期。",
+      "isShowType": "0"
+    },
+    {
+      "lotteryId": "32",
+      "lotteryName": "湖北快三",
+      "explain": "lottery_hbks_help",
+      "tip": "9:20-22:00 ，20分钟/期，全天39期。",
+      "isShowType": "0"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "大小骰宝",
+          "playId": "1"
+        }
+      ]
+    }
+  ]
+}

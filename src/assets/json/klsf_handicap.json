@@ -1,0 +1,34 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "29",
+      "lotteryName": "重庆快乐十分",
+      "explain": "lottery_cqklsf_help",
+      "tip": "00:11-23:31  20分钟一期，全天共59期。",
+      "isShowType": "0"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "两面盘",
+          "playId": "1"
+        },
+        {
+          "playName": "单球1~8",
+          "playId": "2"
+        },
+        {
+          "playName": "龙虎斗",
+          "playId": "3"
+        },
+        {
+          "playName": "全8中1",
+          "playId": "4"
+        }
+      ]
+    }
+  ]
+}

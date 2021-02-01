@@ -3,7 +3,7 @@
     <div>
       起始倍数
       <numeric-input
-        v-model="multipleValue"
+        v-model="addMultiple"
         :min="1"
         :max="9999"
         :step="1"
@@ -32,13 +32,15 @@ export default {
   data () {
     return {
       issues: 10,
-      multipleValue: 1
+      addMultiple: 1
     }
   },
   methods: {
     change_beishu () {
+      // console.log(this.multipleValue)
     },
     produceIusse () {
+      this.$bus.$emit('produceIusse', this)
     }
   }
 }

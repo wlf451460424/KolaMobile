@@ -1,0 +1,22 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "",
+      "lotteryName": "幸运28",
+      "explain": "lottery_xy28_help",
+      "tip": "09:05-23:55，5分钟一期，全天179期。",
+      "isShowType": "1"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "整合",
+          "playId": "1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "11x5": [
+    {
+      "lotteryId": "15",
+      "lotteryName": "江苏11选5"
+    },
+    {
+      "lotteryId": "16",
+      "lotteryName": "江西11选5"
+    },
+    {
+      "lotteryId": "17",
+      "lotteryName": "广东11选5"
+    },
+    {
+      "lotteryId": "18",
+      "lotteryName": "山东11选5"
+    },
+    {
+      "lotteryId": "19",
+      "lotteryName": "上海11选5"
+    },
+    {
+      "lotteryId": "20",
+      "lotteryName": "安徽11选5"
+    },
+    {
+      "lotteryId": "21",
+      "lotteryName": "河北11选5"
+    },
+    {
+      "lotteryId": "22",
+      "lotteryName": "黑龙江11选5"
+    },
+    {
+      "lotteryId": "23",
+      "lotteryName": "辽宁11选5"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "两面盘",
+          "playId": "1"
+        },
+        {
+          "playName": "单号",
+          "playId": "2"
+        },
+        {
+          "playName": "龙虎斗",
+          "playId": "3"
+        },
+        {
+          "playName": "全5中1",
+          "playId": "4"
+        }
+      ]
+    }
+  ]
+}

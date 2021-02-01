@@ -1,0 +1,26 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "24",
+      "lotteryName": "北京快乐8",
+      "explain": "lottery_bjklb_help",
+      "tip": "09:00-23:55，5分钟一期，全天179期。",
+      "isShowType": "1"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "总和比数五行",
+          "playId": "1"
+        },
+        {
+          "playName": "正码",
+          "playId": "2"
+        }
+      ]
+    }
+  ]
+}

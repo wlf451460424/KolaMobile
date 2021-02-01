@@ -45,7 +45,7 @@ export default {
   height: 88px;
   background-color: $color-blue;
   .leftItem {
-    width: 60px;
+    width: 40vw;
     height: 88px;
     margin-left: 20px;
     display: flex;
@@ -72,16 +72,17 @@ export default {
     color: white;
   }
   .rightItem {
-    width: 60px;
+    width: 40vw;
     height: 88px;
     display: flex;
     align-items: center;
     margin-right: 20px;
+    justify-content: flex-end;
     a {
       display: block;
       text-decoration: none;
       color: white;
-      font-size: 36px;
+      font-size: 24px;
       img {
         padding: 10px 10px;
         width: 24px;

@@ -1,0 +1,103 @@
+{
+  "ssl": [
+    {
+      "lotteryId": "27",
+      "lotteryName": "上海时时乐"
+    }
+  ],
+  "play": [
+    {
+      "kind": "三星",
+      "data": [
+        {
+          "playId": 1,
+          "playName": "直选复式"
+        },
+        {
+          "playId": 2,
+          "playName": "直选单式"
+        },
+        {
+          "playId": 3,
+          "playName": "直选和值"
+        },
+        {
+          "playId": 4,
+          "playName": "组三复式"
+        },
+        {
+          "playId": 5,
+          "playName": "组六复式"
+        }
+      ]
+    },
+    {
+      "kind": "前二",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 6
+        },
+        {
+          "playName": "直选单式",
+          "playId": 7
+        },
+        {
+          "playName": "直选和值",
+          "playId": 8
+        },
+        {
+          "playName": "组选复式",
+          "playId": 9
+        },
+        {
+          "playName": "组选单式",
+          "playId": 10
+        }
+      ]
+    },
+    {
+      "kind": "后二",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 11
+        },
+        {
+          "playName": "直选单式",
+          "playId": 12
+        },
+        {
+          "playName": "直选和值",
+          "playId": 13
+        },
+        {
+          "playName": "组选复式",
+          "playId": 14
+        },
+        {
+          "playName": "组选单式",
+          "playId": 15
+        }
+      ]
+    },
+    {
+      "kind": "前一",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 16
+        }
+      ]
+    },
+    {
+      "kind": "后一",
+      "data": [
+        {
+          "playName": "直选复式",
+          "playId": 17
+        }
+      ]
+    }
+  ]
+}

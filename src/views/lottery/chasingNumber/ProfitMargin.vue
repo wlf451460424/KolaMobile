@@ -3,7 +3,7 @@
     <div>
       起始倍数
       <numeric-input
-        v-model="multipleValue"
+        v-model="addMultiple"
         :min="1"
         :max="9999"
         :step="1"
@@ -23,7 +23,9 @@
         type="number"
       >%
     </div>
-    <cube-button>生成追号计划</cube-button>
+    <cube-button @click="produceIusse">
+      生成追号计划
+    </cube-button>
   </div>
 </template>
 <script>
@@ -35,8 +37,13 @@ export default {
   data () {
     return {
       issues: 10,
-      multipleValue: 1,
+      addMultiple: 1,
       minProfit: 50
+    }
+  },
+  methods: {
+    produceIusse () {
+      this.$bus.$emit('produceIusse', this)
     }
   }
 }

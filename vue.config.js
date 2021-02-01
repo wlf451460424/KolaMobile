@@ -26,8 +26,8 @@ module.exports = {
         changeOrigin: true,
         secure: false,
         pathRewrite: {
-          '^/api/player': '/player/api/player',
-          '^/api/metadata': '/metadata/api/metadata'
+          '^/api/player': '/api/player',
+          '^/api/metadata': '/api/metadata'
         }
       }
     }
@@ -73,7 +73,7 @@ module.exports = {
     // 生产环境打包分析体积
     if (IS_PROD) {
       const plugins = []
-      if (process.env.VUE_APP_MODE === 'production') {
+      if (process.env.VUE_APP_MODE === 'staging') {
         plugins.push(new BundleAnalyzerPlugin())
       }
       plugins.push(new TerserPlugin({

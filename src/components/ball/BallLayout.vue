@@ -48,7 +48,7 @@
 <script>
 import NumberBall from './NumberBall'
 import types from '@store/modules/mutation-types'
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'BallLayout',
   components: {
@@ -79,7 +79,10 @@ export default {
     },
     isLabel () {
       return this.rowObj.isHiddenLabel
-    }
+    },
+    ...mapState('lottery', {
+      lottery_type: state => state.lottery_type
+    })
   },
   methods: {
     ballClick (payload) {
@@ -102,52 +105,78 @@ export default {
     bigClick () {
       this.clearSelectedClick()
       this.$children
-        .filter((item, index) => index >= this.$children.length / 2)
+        .filter((item, index) => {
+          return index >= (this.$children.length - 1) / 2
+        })
         .forEach(item => {
           item.isActive = true
         })
       this.ballSelected({
         labelIndex: this.rowObj.ballIndex,
-        balls: this.$children.filter((item, index) => index >= this.$children.length / 2)
+        balls: this.$children.filter((item, index) => index >= (this.$children.length - 1) / 2)
       })
       this.$bus.$emit('calcNotes')
     },
     smallClick () {
       this.clearSelectedClick()
       this.$children
-        .filter((item, index) => index < this.$children.length / 2)
+        .filter((item, index) => index < (this.$children.length - 1) / 2)
         .forEach(item => {
           item.isActive = true
         })
       this.ballSelected({
         labelIndex: this.rowObj.ballIndex,
-        balls: this.$children.filter((item, index) => index < this.$children.length / 2)
+        balls: this.$children.filter((item, index) => index < (this.$children.length - 1) / 2)
       })
       this.$bus.$emit('calcNotes')
     },
     oddClick () {
       this.clearSelectedClick()
       this.$children
-        .filter((item, index) => index % 2 !== 0)
+        .filter((item, index) => {
+          if (this.lottery_type === 2) {
+            return (index + 1) % 2 !== 0
+          } else {
+            return index % 2 !== 0
+          }
+        })
         .forEach(item => {
           item.isActive = true
         })
       this.ballSelected({
         labelIndex: this.rowObj.ballIndex,
-        balls: this.$children.filter((item, index) => index % 2 !== 0)
+        balls: this.$children.filter((item, index) => {
+          if (this.lottery_type === 2) {
+            return (index + 1) % 2 !== 0
+          } else {
+            return index % 2 !== 0
+          }
+        })
       })
       this.$bus.$emit('calcNotes')
     },
     evenClick () {
       this.clearSelectedClick()
       this.$children
-        .filter((item, index) => index % 2 === 0)
+        .filter((item, index) => {
+          if (this.lottery_type === 2) {
+            return (index + 1) % 2 === 0
+          } else {
+            return index % 2 === 0
+          }
+        })
         .forEach(item => {
           item.isActive = true
         })
       this.ballSelected({
         labelIndex: this.rowObj.ballIndex,
-        balls: this.$children.filter((item, index) => index % 2 === 0)
+        balls: this.$children.filter((item, index) => {
+          if (this.lottery_type === 2) {
+            return (index + 1) % 2 === 0
+          } else {
+            return index % 2 === 0
+          }
+        })
       })
       this.$bus.$emit('calcNotes')
     },
@@ -173,8 +202,7 @@ export default {
   flex-direction: column;
   .top_layout {
     display: inline-flex;
-    height: 220px;
-    background-color: white;
+    // background-color: white;
     .label_style {
       display: flex;
       flex-direction: column;
@@ -193,13 +221,13 @@ export default {
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: 0 20px;
+      margin: 0 30px;
       .ball_style {
-        margin-right: 30px;
+        margin:0 30px 30px 0;
       }
     }
     .ball_layout_label:after {
-      content: "";
+      // content: "";
       flex: auto;
     }
   }

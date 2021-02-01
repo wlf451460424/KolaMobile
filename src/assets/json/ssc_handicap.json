@@ -1,0 +1,121 @@
+{
+  "ssc": [
+    {
+      "lotteryId": "1",
+      "lotteryName": "重庆时时彩",
+      "explain": "lottery_cqssc_help",
+      "tip": "白天7:30-23:50，50期；夜间0:30-3:10, 9期；20分钟一期，全天共59期。",
+      "isShowType": "1"
+    },
+    {
+      "lotteryId": "2",
+      "lotteryName": "新疆时时彩",
+      "explain": "lottery_xjssc_help",
+      "tip": "10:20-2:00，20分钟一期，全天48期。",
+      "isShowType": "0"
+    },
+    {
+      "lotteryId": "3",
+      "lotteryName": "天津时时彩",
+      "explain": "lottery_tjssc_help",
+      "tip": "9:20-23:00，20分钟一期，全天42期。",
+      "isShowType": "0"
+    },
+    {
+      "lotteryId": "4",
+      "lotteryName": "黑龙江时时彩",
+      "explain": "lottery_hljssc_help",
+      "tip": "9:00—22:40 ，20分钟一期，全天42期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "5",
+      "lotteryName": "台湾宾果",
+      "explain": "lottery_twbg_help",
+      "tip": "9:30-23:10，20分钟一期，全天42期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "6",
+      "lotteryName": "河内1分彩",
+      "explain": "lottery_hnffc_help",
+      "tip": "1分钟一期，共1440期，每天 00:00 至 23:59开奖",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "7",
+      "lotteryName": "河内5分彩",
+      "explain": "lottery_hnwfc_help",
+      "tip": "00:00-23:55，5分钟一期，全天288期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "8",
+      "lotteryName": "腾讯分分彩（奇趣）",
+      "explain": "lottery_qqtxffc_help",
+      "tip": "24小时售卖，1分钟一期，全天共1440期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "9",
+      "lotteryName": "腾讯分分彩（凤凰）",
+      "explain": "lottery_fhtxffc_help",
+      "tip": "24小时售卖，1分钟一期，全天共1440期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "10",
+      "lotteryName": "腾讯2分彩-单",
+      "explain": "lottery_txefcd_help",
+      "tip": "全天售卖，2分钟一期，共720期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "11",
+      "lotteryName": "腾讯2分彩-双",
+      "explain": "lottery_txefcs_help",
+      "tip": "全天售卖，2分钟一期，共720期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "12",
+      "lotteryName": "腾讯3分彩",
+      "explain": "lottery_txsfc_help",
+      "tip": "全天售卖，3分钟一期，共480期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "13",
+      "lotteryName": "腾讯5分彩",
+      "explain": "lottery_txwfc_help",
+      "tip": "全天售卖，5分钟一期，共288期。",
+      "isShowType": "2"
+    },
+    {
+      "lotteryId": "14",
+      "lotteryName": "币安分分彩",
+      "explain": "lottery_baffc_help",
+      "tip": "1分钟一期，共1440期，每天 00:00 至 23:59开奖",
+      "isShowType": "2"
+    }
+  ],
+  "play": [
+    {
+      "kind": "盘口",
+      "data": [
+        {
+          "playName": "整合",
+          "playId": "1"
+        },
+        {
+          "playName": "龙虎斗",
+          "playId": "2"
+        },
+        {
+          "playName": "全5中1",
+          "playId": "3"
+        }
+      ]
+    }
+  ]
+}

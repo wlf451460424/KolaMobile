@@ -1,60 +1,4 @@
 {
-  "1": {
-    "viewType": "1",
-    "limit": "1",
-    "playId": "1",
-    "mutex": "0",
-    "selCardNum": "0",
-    "playName": "通选复式",
-    "kind": "五星",
-    "item": [
-      {
-        "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballValue": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballLabel": "万位",
-        "maxSelect": "10",
-        "minSelect": "1"
-      },
-      {
-        "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballValue": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballLabel": "千位",
-        "maxSelect": "10",
-        "minSelect": "1"
-      },
-      {
-        "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballValue": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballLabel": "百位",
-        "maxSelect": "10",
-        "minSelect": "1"
-      },
-      {
-        "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballValue": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballLabel": "十位",
-        "maxSelect": "10",
-        "minSelect": "1"
-      },
-      {
-        "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballValue": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        "ballLabel": "个位",
-        "maxSelect": "10",
-        "minSelect": "1"
-      }
-    ]
-  },
-  "2": {
-    "viewType": "2",
-    "limit": "2",
-    "playId": "2",
-    "mutex": "0",
-    "selCardNum": "0",
-    "playName": "通选单式",
-    "kind": "五星",
-    "item": []
-  },
   "3": {
     "viewType": "1",
     "limit": "1",
@@ -109,6 +53,8 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "五星",
+    "ballNum":5,
+    "introduce":"<p>格式说明:</p><p>五星直选:12345</p><p>1)每注必须是5个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",
     "item": []
   },
   "5": {
@@ -319,6 +265,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "后四",
+    "introduce": "<b>格式说明</b><br/>后四直选：1234<br/>1）每注必须是4个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "14": {
@@ -365,7 +312,7 @@
     ]
   },
   "16": {
-    "viewType": "1",
+    "viewType": "3",
     "limit": "1",
     "playId": "16",
     "mutex": "0",
@@ -454,6 +401,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "前四",
+    "introduce": "<b>格式说明</b><br/>前四直选：1234<br/>1）每注必须是4个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "20": {
@@ -500,7 +448,7 @@
     ]
   },
   "22": {
-    "viewType": "1",
+    "viewType": "3",
     "limit": "1",
     "playId": "22",
     "mutex": "0",
@@ -582,6 +530,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "后三",
+    "introduce": "<b>格式说明</b><br/>后三直选：123<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "26": {
@@ -664,6 +613,7 @@
     "selCardNum": "0",
     "playName": "混合组选",
     "kind": "后三",
+    "introduce": "<b>格式说明</b><br/>后三混合组选(含组三、组六)：123或者223<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "31": {
@@ -778,6 +728,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "中三",
+    "introduce": "<b>格式说明</b><br/>中三直选：123<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "37": {
@@ -860,6 +811,7 @@
     "selCardNum": "0",
     "playName": "混合组选",
     "kind": "中三",
+    "introduce": "<b>格式说明</b><br/>中三混合组选（含组三、组六）：123或者223<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "42": {
@@ -974,6 +926,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "前三",
+    "introduce": "<b>格式说明</b><br/>前三直选：123<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "48": {
@@ -1056,6 +1009,7 @@
     "selCardNum": "0",
     "playName": "混合组选",
     "kind": "前三",
+    "introduce": "<b>格式说明</b><br/>前三混合组选（含组三、组六）：123或者223<br/>1）每注必须是3个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "53": {
@@ -1163,6 +1117,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "后二",
+    "introduce": "<b>格式说明</b><br/>后二直选：12<br/>1）每注必须是2个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "59": {
@@ -1288,6 +1243,7 @@
     "selCardNum": "0",
     "playName": "直选单式",
     "kind": "前二",
+    "introduce": "<b>格式说明</b><br/>前二直选：12<br/>1）每注必须是2个号码，每个号码之间无需用符号分割；<br/>2）每注之间以空格分割；<br/>3）只支持单式。",
     "item": []
   },
   "66": {
@@ -1625,7 +1581,7 @@
     ]
   },
   "83": {
-    "viewType": "5",
+    "viewType": "4",
     "limit": "0",
     "playId": "83",
     "mutex": "0",
@@ -1657,7 +1613,7 @@
     ]
   },
   "84": {
-    "viewType": "5",
+    "viewType": "4",
     "limit": "0",
     "playId": "84",
     "mutex": "0",
@@ -1689,7 +1645,7 @@
     ]
   },
   "85": {
-    "viewType": "5",
+    "viewType": "4",
     "limit": "0",
     "playId": "85",
     "mutex": "0",
@@ -1714,7 +1670,7 @@
     ]
   },
   "86": {
-    "viewType": "5",
+    "viewType": "4",
     "limit": "0",
     "playId": "86",
     "mutex": "0",
@@ -1730,7 +1686,7 @@
         "minSelect": "1"
       },
       {
-        "ballText": ["大", "小", "单", "双"],
+        "ballText": ["大", "小", "单", "双","121", "1小", "2单", "3双", "2单"],
         "ballValue": ["0", "1", "2", "3"],
         "ballLabel": "千位",
         "maxSelect": "4",
@@ -1792,16 +1748,21 @@
     "selCardNum": "2",
     "playName": "直选单式",
     "kind": "任选二",
+    "positionShow":true,
+    "position":[false,false,false,true,true],
+    "introduce":"<p>格式说明:</p><p>任选二直选:12</p><p>1)每注必须是2个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",
     "item": []
   },
   "89": {
-    "viewType": "7",
+    "viewType": "4",
     "limit": "0",
     "playId": "89",
     "mutex": "0",
     "selCardNum": "2",
     "playName": "直选和值",
     "kind": "任选二",
+    "positionShow":true,
+    "position":[false,false,false,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
@@ -1813,13 +1774,15 @@
     ]
   },
   "90": {
-    "viewType": "8",
+    "viewType": "3",
     "limit": "1",
     "playId": "90",
     "mutex": "0",
     "selCardNum": "2",
     "playName": "组选复式",
     "kind": "任选二",
+    "positionShow":true,
+    "position":[false,false,false,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -1838,16 +1801,21 @@
     "selCardNum": "2",
     "playName": "组选单式",
     "kind": "任选二",
+    "positionShow":true,
+    "position":[false,false,false,true,true],
+    "introduce":"<p>格式说明:</p><p>任选二组选:12</p><p>1)每注必须是2个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",
     "item": []
   },
   "92": {
-    "viewType": "7",
+    "viewType": "4",
     "limit": "0",
     "playId": "92",
     "mutex": "0",
     "selCardNum": "2",
     "playName": "组选和值",
     "kind": "任选二",
+    "positionShow":true,
+    "position":[false,false,false,true,true],
     "item": [
       {
         "ballText": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"],
@@ -1859,7 +1827,7 @@
     ]
   },
   "93": {
-    "viewType": "",
+    "viewType": "1",
     "limit": "1",
     "playId": "93",
     "mutex": "0",
@@ -1912,16 +1880,21 @@
     "selCardNum": "3",
     "playName": "直选单式",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
+    "introduce":"<p>格式说明:</p><p>任选三直选:123</p><p>1)每注必须是3个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",   
     "item": []
   },
   "95": {
-    "viewType": "7",
+    "viewType": "4",
     "limit": "0",
     "playId": "95",
     "mutex": "0",
     "selCardNum": "3",
     "playName": "直选和值",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27"],
@@ -1933,13 +1906,15 @@
     ]
   },
   "96": {
-    "viewType": "8",
+    "viewType": "3",
     "limit": "1",
     "playId": "96",
     "mutex": "0",
     "selCardNum": "3",
     "playName": "组三复式",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -1958,16 +1933,21 @@
     "selCardNum": "3",
     "playName": "组三单式",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
+    "introduce":"<p>格式说明:</p><p>任选三组三:122</p><p>1)每注必须是3个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",   
     "item": []
   },
   "98": {
-    "viewType": "8",
+    "viewType": "3",
     "limit": "1",
     "playId": "98",
     "mutex": "0",
     "selCardNum": "3",
     "playName": "组六复式",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -1986,6 +1966,9 @@
     "selCardNum": "3",
     "playName": "组六单式",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
+    "introduce":"<p>格式说明:</p><p>任选三组六:123</p><p>1)每注必须是3个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",   
     "item": []
   },
   "100": {
@@ -1996,16 +1979,21 @@
     "selCardNum": "3",
     "playName": "混合组选",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
+    "introduce":"<p>格式说明:</p><p>任选三混合组选:122或123</p><p>1)每注必须是3个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",   
     "item": []
   },
   "101": {
-    "viewType": "7",
+    "viewType": "4",
     "limit": "0",
     "playId": "101",
     "mutex": "0",
     "selCardNum": "3",
     "playName": "组选和值",
     "kind": "任选三",
+    "positionShow":true,
+    "position":[false,false,true,true,true],
     "item": [
       {
         "ballText": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
@@ -2070,16 +2058,21 @@
     "selCardNum": "4",
     "playName": "直选单式",
     "kind": "任选四",
+    "positionShow":true,
+    "position":[false,true,true,true,true],
+    "introduce":"<p>格式说明:</p><p>任选四直选:1234</p><p>1)每注必须是4个号码,每个号码之间无需用符号分割;</p><p>2)每注之间可用空格;</p><p>3)只支持单式。</p>",   
     "item": []
   },
   "104": {
-    "viewType": "8",
+    "viewType": "3",
     "limit": "1",
     "playId": "104",
     "mutex": "0",
     "selCardNum": "4",
     "playName": "组选24",
     "kind": "任选四",
+    "positionShow":true,
+    "position":[false,true,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -2091,13 +2084,15 @@
     ]
   },
   "105": {
-    "viewType": "9",
+    "viewType": "3",
     "limit": "1",
     "playId": "105",
     "mutex": "0",
     "selCardNum": "4",
     "playName": "组选12",
     "kind": "任选四",
+    "positionShow":true,
+    "position":[false,true,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -2116,13 +2111,15 @@
     ]
   },
   "106": {
-    "viewType": "9",
+    "viewType": "3",
     "limit": "1",
     "playId": "106",
     "mutex": "0",
     "selCardNum": "4",
     "playName": "组选6",
     "kind": "任选四",
+    "positionShow":true,
+    "position":[false,true,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -2134,13 +2131,15 @@
     ]
   },
   "107": {
-    "viewType": "9",
+    "viewType": "3",
     "limit": "1",
     "playId": "107",
     "mutex": "0",
     "selCardNum": "4",
     "playName": "组选4",
     "kind": "任选四",
+    "positionShow":true,
+    "position":[false,true,true,true,true],
     "item": [
       {
         "ballText": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],

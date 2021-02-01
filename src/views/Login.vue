@@ -37,12 +37,13 @@ export default {
   },
   methods: {
     login () {
-      this.$api.login.login({ 'msg': 123 }).then(res => {
-        this.save(res.data.data)
-        this.$router.replace({ path: '/' })
-      }).catch(err => {
-        this.$toast.showText(err.msg || '登录失败')
-      })
+      // this.$api.login.login({ 'msg': 123 }).then(res => {
+      //   this.save(res.data.data)
+      //   this.$router.replace({ path: '/' })
+      // }).catch(err => {
+      //   this.$toast.showText(err.msg || '登录失败')
+      // })
+      this.$router.replace({ path: '/' })
     },
     ...mapMutations('userInfo', {
       save: types.SAVE_TOKEN

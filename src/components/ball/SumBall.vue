@@ -79,8 +79,7 @@ export default {
   flex-direction: column;
   .top_layout {
     display: flex;
-    // height: 700px;
-    background-color: white;
+    // background-color: white;
     .label_style {
       display: flex;
       flex-direction: column;

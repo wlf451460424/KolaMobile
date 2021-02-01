@@ -1,0 +1,77 @@
+{
+  "kl8": [
+    {
+      "lotteryId": "24",
+      "lotteryName": "北京快乐8"
+    }
+  ],
+  "play": [
+    {
+      "kind": "任选",
+      "data": [
+        {
+          "playId": 1,
+          "playName": "任选一"
+        },
+        {
+          "playId": 2,
+          "playName": "任选二"
+        },
+        {
+          "playId": 3,
+          "playName": "任选三"
+        },
+        {
+          "playId": 4,
+          "playName": "任选四"
+        },
+        {
+          "playId": 5,
+          "playName": "任选五"
+        },
+        {
+          "playId": 6,
+          "playName": "任选六"
+        },
+        {
+          "playId": 7,
+          "playName": "任选七"
+        }
+      ]
+    },
+    {
+      "kind": "趣味",
+      "data": [
+        {
+          "playName": "上下盘",
+          "playId": 8
+        },
+        {
+          "playName": "奇偶盘",
+          "playId": 9
+        },
+        {
+          "playName": "和值大小",
+          "playId": 10
+        },
+        {
+          "playName": "和值单双",
+          "playId": 11
+        },
+        {
+          "playName": "和值大小单双",
+          "playId": 12
+        }
+      ]
+    },
+    {
+      "kind": "五行",
+      "data": [
+        {
+          "playName": "五行",
+          "playId": 13
+        }
+      ]
+    }
+  ]
+}

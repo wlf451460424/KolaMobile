@@ -37,10 +37,10 @@ export default {
     width: 60px;
     height: 60px;
     line-height: 60px;
-    background-color: $color-blue;
+    background-color: $color-gray;
     color: white;
     margin-left: 14px;
-    border-radius: 10px;
+    border-radius: 60px;
   }
   .active {
     background-color: $color-light-green;

@@ -16,4 +16,10 @@
   color: #2c3e50;
   font-size: 14px;
 }
+.cube-toast-tip {
+  max-height: 100% !important;
+}
+.cube-select::after{
+  border: rgba($color: #fff, $alpha: 0);
+}
 </style>

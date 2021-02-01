@@ -5,12 +5,37 @@
       @left-click="back"
     />
     <div class="content">
-      <div class="content_btn">
+      <div
+        class="content_btn"
+      >
         <a @click="manualSelect"><img src="@assets/checkoutpage_shoudong.png">手动选号</a>
-        <a @click="autoSelect"><img src="@assets/checkoutpage_zhuihao.png">自动选号</a>
-        <a @click="addChasingNumber"><img src="@assets/checkoutpage_zhuihao.png">添加追号</a>
+        <a
+          v-if="lotteryMode === 0"
+          @click="addChasingNumber"
+        ><img src="@assets/checkoutpage_zhuihao.png">添加追号</a>
+
+        <div
+          v-if="lotteryMode === 1"
+          style="display:flex;flex-direction: row;background: #ffffff;align-items: center;padding:6px 10px"
+        >
+          <cube-input
+            v-model="quickMoney"
+            type="number"
+            placeholder="请输入金额"
+            class="cube-text-style"
+          />
+          <div
+            class="divStyle"
+            @click="quickMoneySelect"
+          >
+            <span style="height:100%;display:flex;align-items: center;">确定</span>
+          </div>
+        </div>
       </div>
-      <div class="contentInfo">
+      <div
+        class="contentInfo"
+        :class="{aa:lotteryMode}"
+      >
         <cube-scroll
           :data="orderList"
         >
@@ -22,6 +47,8 @@
               <CheckoutPageListItem
                 :index="index"
                 :item="order"
+                :lottery-mode="lotteryMode"
+                @changeOrderMoney="changeMoney"
                 @orderDelete="deleteItem"
               />
             </li>
@@ -48,8 +75,10 @@
 <script>
 import CheckoutPageListItem from './CheckoutPageListItem'
 import MathUtils from '@utils/math-utils'
+import LotteryUtils from '@utils/lottery-utils'
 import types from '@store/modules/mutation-types'
 import { mapState, mapMutations } from 'vuex'
+import DialogUtils from '@common/dialog'
 export default {
   components: {
     CheckoutPageListItem
@@ -57,13 +86,14 @@ export default {
   data () {
     return {
       lottery: this.$route.params,
-      currentIusse: ''
+      currentIusse: '',
+      title: this.$route.params.lotteryMode === 0 ? this.$route.params.lotteryName : this.$route.params.lotteryName + '(信)',
+      lotteryMode: this.$route.params.lotteryMode,
+      money: 0,
+      quickMoney: ''
     }
   },
   computed: {
-    title () {
-      return this.lottery.lotteryName
-    },
     notes () {
       return this.orderList.map(item => {
         return item.notes
@@ -71,26 +101,59 @@ export default {
         return MathUtils.add(prev, cur)
       }, 0)
     },
-    money () {
-      return this.orderList.map(item => {
-        return item.totalMoney
-      }).reduce((prev, cur) => {
-        return MathUtils.add(prev, cur)
-      }, 0)
-    },
+    // money () {
+    //   return this.orderList.map(item => {
+    //     return item.totalMoney === '' ? 0 : item.totalMoney
+    //   }).reduce((prev, cur) => {
+    //     return MathUtils.add(prev, cur)
+    //   }, 0)
+    // },
     ...mapState('lottery', {
-      orderList: state => state.shoppingBasket
+      orderList: state => state.shoppingBasket,
+      lottery_type: state => state.lottery_type,
+      lottery_no: state => state.lottery_no
     })
   },
-  created () {
-    console.log(this.orderList[0].betContent.ballTexts)
+  mounted () {
+    this.getMoney()
   },
   methods: {
     back () {
       this.$router.go(-1)
     },
+    changeMoney (o) {
+      this.shoppingBasketAdd({
+        ballText: o.itemObj.ballText,
+        ballValue: o.itemObj.ballValue,
+        isActive: o.itemObj.isActive,
+        ballIndex: o.itemObj.ballIndex,
+        playCode: o.itemObj.playCode,
+        ballOdd: o.itemObj.ballOdd,
+        totalMoney: o.betMoney,
+        notes: 1,
+        rowLabel: o.itemObj.rowLabel
+      })
+      this.getMoney()
+    },
+    quickMoneySelect () {
+      this.orderList.map(item => {
+        this.shoppingBasketAdd({
+          ballText: item.ballText,
+          ballValue: item.ballValue,
+          isActive: item.isActive,
+          ballIndex: item.ballIndex,
+          playCode: item.playCode,
+          ballOdd: item.ballOdd,
+          totalMoney: this.quickMoney,
+          notes: 1,
+          rowLabel: item.rowLabel
+        })
+      })
+      this.getMoney()
+    },
     deleteItem (val) {
       this.deleteOrder(val)
+      this.getMoney()
     },
     manualSelect () {
       this.$router.go(-1)
@@ -98,65 +161,77 @@ export default {
     autoSelect () {
     },
     addChasingNumber () {
-      this.$router.push({ name: 'ChasingNumberPage', params: this.lottery })
+      this.$router.push({ name: 'ChasingNumberPage', params: this })
     },
     goBetting () {
-      // 获取当前期号
-      var param = '{ "lottery_no":' + this.lottery.lotteryId + ' }'
-      this.$api.lottery.getIssue(param).then(res => {
-        console.log(res.data.data)
-        this.currentIusse = res.data.data.issue_no
-      })
-      if (this.currentIusse === '') {
-        return
-      }
-      this.produceBettingContent()
-    },
-    produceBettingContent () {
-      var currentIusse = ''
-      var param = '{ "lottery_no":' + this.lottery.lotteryId + ' }'
-      this.$api.lottery.getIssue(param).then(res => {
-        console.log(res.data.data)
-        currentIusse = res.data.data.issue_no
-        if (currentIusse === '') {
-          return this.toast.showText('获取期号失败')
+      if (this.orderList.length > 0) {
+        let flag = true
+        this.orderList.some(item => {
+          if (!item.totalMoney) {
+            flag = false
+            return true
+          }
+        })
+        if (!flag) {
+          this.$toast.showText('投注金额不能为空')
+          return false
         }
-      })
-      // 装载投注内容
-      var paramList = []
-      this.orderList.map(
-        item => {
-          var checkoutParam = {
-            toString: function () {
-              return JSON.stringify(this)
+        const singleMode = LotteryUtils.singleMode
+        const singleQuota = LotteryUtils.singleQuota
+        // 获取当前期号
+        var param = '{ "lottery_no":' + this.lottery_no + ' }'
+        this.$api.lottery.getIssue(param).then(res => {
+          this.currentIusse = res.data.data.issue_no
+          if (this.currentIusse !== '') {
+            if (this.lotteryMode === 0) {
+              if (singleMode === 1) { // 单期风险控制提醒
+                DialogUtils.showText('该彩种单期最高奖金' + singleQuota + '元，请确认', this.produceBettingContent)
+              } else {
+                this.produceBettingContent()
+              }
+            } else {
+              this.produceBettingContent()
             }
           }
-          checkoutParam.bet_mode = item.mode[0]
-          checkoutParam.bet_count = item.notes
-          checkoutParam.bet_multiple = item.multipleValue
-          checkoutParam.bet_amount = item.totalMoney
-          checkoutParam.bet_content = item.betContent.ballValues
-          // 暂时没有返回  写死
-          checkoutParam.bet_rebate = '1980'
-          checkoutParam.play_code = item.play.playId
-          // checkoutParam.PlayName = item.play.playName.play + '_' + item.play.playName.playName
-          paramList.push(checkoutParam)
+        })
+      } else {
+        this.$toast.showText('投注信息不能为空')
+      }
+    },
+    produceBettingContent () {
+      const paramList = LotteryUtils.getBetParams(this.lotteryMode)
+      const _data = {
+        lottery_no: Number(this.lottery_no),
+        issue_no: this.currentIusse,
+        play_mode: this.lotteryMode === 0 ? 1 : 2
+      }
+      _data.bet = paramList
+      this.$api.lottery.bet(_data).then(res => {
+        if (res.data.code === 200) {
+          this.clearShoppingBasket()
+          DialogUtils.showText('投注成功', this.back, this.goRecord, '继续投注', '查看记录')
+        } else {
+          this.$toast.showText(res.data.msg)
         }
-      )
-      var params = '{"lottery_no":' + this.lottery.lotteryId + ',"issue_no":"' + this.currentIusse + '","bet":[' + paramList.join(',') + '],"issue_list":[]}'
-      console.log(params)
-      this.$toast.showText(`接口未实现`)
-      // this.$api.lottery.bet(params).then(res => {
-      //   console.log(res.data.data)
-      //   this.save(res.data.data)
-      //   // this.$router.push('/')
-      //   this.$toast.showText(`投注成功`)
-      // })
+      })
+    },
+    goRecord () {
+      this.$router.push({ name: 'BettingRecord' })
+    },
+    getMoney () {
+      this.money = this.orderList.map(item => {
+        return item.totalMoney === '' ? 0 : item.totalMoney
+      }).reduce((prev, cur) => {
+        return MathUtils.add(prev, cur)
+      }, 0)
     },
     clearShoppingBasket () {
+      this.money = 0
+      this.quickMoney = ''
       this.deleteAllOrders()
     },
     ...mapMutations('lottery', {
+      shoppingBasketAdd: types.SHOPPING_BASKET_ADD,
       deleteOrder: types.ORDER_DELETE,
       deleteAllOrders: types.DELETE_ALL_ORDERS
     })
@@ -231,5 +306,33 @@ export default {
       }
     }
   }
+}
+::v-deep .cube-input{
+  line-height: 1;
+  height: 8vw;
+  width: 100%;
+}
+::v-deep .cube-input::after{
+  // border-color: rgb(255, 255, 255) transparent transparent transparent;
+  // border-color: rgba($color: #000000, $alpha: 0.3)
+  border: 4px solid #DCDCDC;
+}
+::v-deep .cube-input-field{
+    line-height: normal;
+    padding: 2vw;
+}
+
+.divStyle{
+  display: flex;
+  width: 26vw;
+  height: 9vw;
+  background: #5095fd;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-left: 20px;
+  justify-content: center;
+}
+.aa{
+  height: calc(65vh) !important;
 }
 </style>

@@ -27,8 +27,8 @@
       class="btn btn-decrement"
       :disabled="disabled || numericValue <= min"
       @mousedown="start(decrement)"
-      @touchstart.native.prevent="start(decrement)"
-      @touchend.native.prevent="stop"
+      @touchstart.prevent="start(decrement)"
+      @touchend.prevent="stop"
     >
       <i class="btn-icon" />
     </button>
@@ -38,8 +38,8 @@
       class="btn btn-increment"
       :disabled="disabled || numericValue >= max"
       @mousedown="start(increment)"
-      @touchstart.native.prevent="start(increment)"
-      @touchend.native.prevent="stop"
+      @touchstart.prevent="start(increment)"
+      @touchend.prevent="stop"
     >
       <i class="btn-icon" />
     </button>
