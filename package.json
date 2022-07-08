@@ -19,7 +19,7 @@
     "element-ui": "^2.14.1",
     "js-cookie": "^2.2.0",
     "mathjs": "^6.0.3",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
     "vc-popup": "^1.1.26",
     "vue": "^2.6.10",
